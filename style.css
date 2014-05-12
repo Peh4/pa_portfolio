@@ -9,3 +9,269 @@
  Tags:         responsive-layout, grid
  Text Domain:  twenty-fourteen-child
 */
+
+@import url("knacss.css");
+
+/*
+
+style
+
+*/
+
+body {
+			background: #fff none;
+			font-family: "Amplitude", helvetica;
+			color:#1a1a1a;
+}
+
+#page {
+	margin:0 auto;
+	padding: 100px 0 0;
+	background: url(images/grille.png) 0 125px repeat-x, url(images/grille.png)  0 550px repeat-x,
+		url(images/colorz.png)  0 0 repeat-y;
+	width:1338px;
+	transition : width 0.2s;
+	font-size: 14px;
+	position: relative;
+	overflow: scroll;
+	background-attachment: scroll;
+}
+
+#head{
+	width:174px;
+	margin-right: 20px;
+	float: left;
+	
+	
+}
+
+#head a {
+	background-color: #ff6666;
+	text-decoration: none;
+	color: #fff;
+	padding: 2px 6px 1px 4px;
+}
+
+#head a:hover {
+	background-color: #1a1a1a;
+}
+.line-through {
+	text-decoration: line-through;
+}
+
+h1, h2 {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.4;
+	text-transform: uppercase;
+	font-family: "AmplitudeCond", helvetica
+}
+
+h2 {
+	color: #fff;
+}
+
+#menu {
+	float: left;
+	position: relative;
+}
+
+ul, li, a {
+	margin:0;
+	padding:0;
+}
+#menu li {
+	display: block;
+}
+#menu a, #menu p {
+	display: block;
+	color:#000;
+	text-decoration: none;
+	height: 25px;
+	width:174px;
+	background: url(images/grille.png) 0 24px repeat-x;
+	line-height: 1.9;
+	
+}
+
+#menu .tit {
+	font-style: italic;
+	font-weight: 100;
+	text-transform: font-weight 0.3s;
+	color: #ff6666;
+}
+
+#menu a:hover {
+	background: #ff6666 none;
+	text-align: right;
+	padding-left: 4px;
+	color: #fff;
+	font-weight: 100;
+	text-transform: uppercase;
+}
+
+#contact {
+	float:left;
+	width:100%;
+	width:174px;
+	margin: 0 0 0 970px;
+	height:26px;
+	line-height: 2;
+	transition: margin 0.2s;
+}
+
+#content {
+	width:950px;
+	margin: 24px 0 0 20px;
+	float: left;
+	transition: width 0.2s;
+	background-color: rgba(1,1,1,0);
+
+}
+#content *{
+	line-height: 1.7857em;
+}
+#content h2{
+	width:174px;
+	float: left;
+	margin-right: 20px;
+	background-color: rgba(1,1,1,0);
+	line-height: 1.2500em;
+	
+}
+#content p{
+	float: left;
+	margin: 0;
+	line-height: 2;
+	background-color: rgba(1,1,1,0);
+	
+}
+
+#content img{
+	margin: 0 0 20px 0; 
+	transition: all 0.2s;
+	float: left;
+	clear: left;
+}
+
+#content .mleft {
+	clear:none;
+	margin:0 0 20px 20px;
+}
+#content .mright {
+	clear:none;
+	flaot:right;
+	margin:0 0 20px 20px;
+}
+
+#content img.large {
+	width:756px;
+	
+}
+#content img.medium {
+	width:562px;
+}
+#content img.small {
+	width:368px;
+}
+
+
+@media screen and (max-width: 1378px){
+	#page {
+		width:1144px;
+	}
+	#contact {
+		margin: 0 0 0 776px;
+	}
+	#content {
+		width:756px;
+	}
+
+	#content img.mleft {
+		margin: 0 0 20px 0;
+	}
+	#content img.mleft + img.mleft, #content img.small + img.mleft{
+		margin: 0 0 20px 20px;
+	}
+	#content img.medium {
+		margin: 0 0 20px 0;	
+	}
+	#content img.small + img.medium {
+		width:368px;
+	}
+}
+@media screen and (max-width: 1184px){
+	#page {
+		width:950px;
+	}					
+	#contact {
+		margin: 0 0 0 582px;
+	}
+	#content {
+		width:562px;
+	}
+
+	#content img.large {
+		width:562px;
+	}
+	
+	#content img.small + img.small {
+		width:174px;
+	}
+
+
+}
+@media screen and (max-width: 990px){
+	#page {
+		width:756px;
+	}					
+	#contact {
+		margin: 0 388px 0 0 ;
+	}
+	#content {
+		width:368px;
+		float:left;
+	}
+	#content p{
+		width:174px;
+	}
+	#content img.medium {
+		width:368px;
+	}
+
+	
+
+}
+@media screen and (max-width: 796px){
+	#page {
+		width:373px;
+	}
+
+	#menu {
+		position: relative;
+	}
+	#menu .tit {
+		position: absolute;
+		overflow: auto;
+		background-color:rgba(255,255,255, 0.9); 
+		height:25px;
+		z-index: 100;
+	}
+	#menu ul {
+		height: 200px;
+		overflow-y: scroll;
+		display: block;
+		padding: 25px 0 0;
+
+	}
+	#contact {
+		margin: 0 0 0 0;
+	}
+	#content {
+		width:100%;
+		margin-left:0; 
+	}
+	#content h2 {
+		color: #ff6666;
+	}
+}
